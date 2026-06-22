@@ -12,12 +12,12 @@
 <div id="Baite">
 <?php
 session_start();
-$conn = new mysqli("localhost", "root","Sianna06@!","gestioneBaite");
+$conn = new mysqli("localhost", "root","","gestioneBaite");
 if($conn){
     $_SESSION['conn'] = $conn;
     $_SESSION['host'] = 'localhost';
     $_SESSION['rootname'] = 'root';
-    $_SESSION['password'] = 'Sianna06@!';
+    $_SESSION['password'] = '';
     $_SESSION['table'] = 'gestioneBaite';
     $result = $conn->query("select b.id as ID, b.nome as NOME, b.link as LINK, b.postiLetto as 'POSTI LETTO', b.note as NOTE from baite b");
     $fields = $result->fetch_fields();
